@@ -1,0 +1,15 @@
+C:\Users\Lenovo\source\c#\Kylie\Test\ConsoleMenu\bin\Debug\net9.0\ConsoleMenu.deps.json
+C:\Users\Lenovo\source\c#\Kylie\Test\ConsoleMenu\bin\Debug\net9.0\ConsoleMenu.dll
+C:\Users\Lenovo\source\c#\Kylie\Test\ConsoleMenu\bin\Debug\net9.0\ConsoleMenu.pdb
+C:\Users\Lenovo\source\c#\Kylie\Test\ConsoleMenu\bin\Debug\net9.0\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\Lenovo\source\c#\Kylie\Test\ConsoleMenu\bin\Debug\net9.0\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\Lenovo\source\c#\Kylie\Test\ConsoleMenu\obj\Debug\net9.0\ConsoleMenu.csproj.AssemblyReference.cache
+C:\Users\Lenovo\source\c#\Kylie\Test\ConsoleMenu\obj\Debug\net9.0\ConsoleMenu.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Lenovo\source\c#\Kylie\Test\ConsoleMenu\obj\Debug\net9.0\ConsoleMenu.AssemblyInfoInputs.cache
+C:\Users\Lenovo\source\c#\Kylie\Test\ConsoleMenu\obj\Debug\net9.0\ConsoleMenu.AssemblyInfo.cs
+C:\Users\Lenovo\source\c#\Kylie\Test\ConsoleMenu\obj\Debug\net9.0\ConsoleMenu.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\source\c#\Kylie\Test\ConsoleMenu\obj\Debug\net9.0\ConsoleM.0AEE25CD.Up2Date
+C:\Users\Lenovo\source\c#\Kylie\Test\ConsoleMenu\obj\Debug\net9.0\ConsoleMenu.dll
+C:\Users\Lenovo\source\c#\Kylie\Test\ConsoleMenu\obj\Debug\net9.0\refint\ConsoleMenu.dll
+C:\Users\Lenovo\source\c#\Kylie\Test\ConsoleMenu\obj\Debug\net9.0\ConsoleMenu.pdb
+C:\Users\Lenovo\source\c#\Kylie\Test\ConsoleMenu\obj\Debug\net9.0\ref\ConsoleMenu.dll
