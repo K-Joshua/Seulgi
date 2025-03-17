@@ -8,6 +8,7 @@ C:\Users\Lenovo\source\c#\Kylie\Test\Library_BasicInfo\obj\Debug\net9.0\Library_
 C:\Users\Lenovo\source\c#\Kylie\Test\Library_BasicInfo\obj\Debug\net9.0\Library_BasicInfo.AssemblyInfoInputs.cache
 C:\Users\Lenovo\source\c#\Kylie\Test\Library_BasicInfo\obj\Debug\net9.0\Library_BasicInfo.AssemblyInfo.cs
 C:\Users\Lenovo\source\c#\Kylie\Test\Library_BasicInfo\obj\Debug\net9.0\Library_BasicInfo.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\source\c#\Kylie\Test\Library_BasicInfo\obj\Debug\net9.0\Library_BasicInfo.sourcelink.json
 C:\Users\Lenovo\source\c#\Kylie\Test\Library_BasicInfo\obj\Debug\net9.0\Library_.C5D95847.Up2Date
 C:\Users\Lenovo\source\c#\Kylie\Test\Library_BasicInfo\obj\Debug\net9.0\Library_BasicInfo.dll
 C:\Users\Lenovo\source\c#\Kylie\Test\Library_BasicInfo\obj\Debug\net9.0\refint\Library_BasicInfo.dll

@@ -38,7 +38,7 @@ namespace LibraryBasicInfo.Tests
         {
             int age = BasicInfo.AgeCalculation(17, 3, 2025, 0, 2, 2004, 10);
 
-            Assert.AreEqual(21, age); // Kanade turned 21 on February 10, 2025
+            Assert.AreEqual(21, age); 
         }
     }
 }

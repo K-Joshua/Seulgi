@@ -8,6 +8,7 @@ C:\Users\Lenovo\source\c#\Kylie\Test\ConsoleMenu\obj\Debug\net9.0\ConsoleMenu.Ge
 C:\Users\Lenovo\source\c#\Kylie\Test\ConsoleMenu\obj\Debug\net9.0\ConsoleMenu.AssemblyInfoInputs.cache
 C:\Users\Lenovo\source\c#\Kylie\Test\ConsoleMenu\obj\Debug\net9.0\ConsoleMenu.AssemblyInfo.cs
 C:\Users\Lenovo\source\c#\Kylie\Test\ConsoleMenu\obj\Debug\net9.0\ConsoleMenu.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\source\c#\Kylie\Test\ConsoleMenu\obj\Debug\net9.0\ConsoleMenu.sourcelink.json
 C:\Users\Lenovo\source\c#\Kylie\Test\ConsoleMenu\obj\Debug\net9.0\ConsoleM.0AEE25CD.Up2Date
 C:\Users\Lenovo\source\c#\Kylie\Test\ConsoleMenu\obj\Debug\net9.0\ConsoleMenu.dll
 C:\Users\Lenovo\source\c#\Kylie\Test\ConsoleMenu\obj\Debug\net9.0\refint\ConsoleMenu.dll

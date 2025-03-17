@@ -1,3 +1,9 @@
+C:\Users\Lenovo\source\c#\Kylie\Test\Test\obj\Debug\net9.0\Basic_Info.csproj.AssemblyReference.cache
+C:\Users\Lenovo\source\c#\Kylie\Test\Test\obj\Debug\net9.0\Basic_Info.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Lenovo\source\c#\Kylie\Test\Test\obj\Debug\net9.0\Basic_Info.AssemblyInfoInputs.cache
+C:\Users\Lenovo\source\c#\Kylie\Test\Test\obj\Debug\net9.0\Basic_Info.AssemblyInfo.cs
+C:\Users\Lenovo\source\c#\Kylie\Test\Test\obj\Debug\net9.0\Basic_Info.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\source\c#\Kylie\Test\Test\obj\Debug\net9.0\Basic_Info.sourcelink.json
 C:\Users\Lenovo\source\c#\Kylie\Test\Test\bin\Debug\net9.0\Basic_Info.exe
 C:\Users\Lenovo\source\c#\Kylie\Test\Test\bin\Debug\net9.0\Basic_Info.deps.json
 C:\Users\Lenovo\source\c#\Kylie\Test\Test\bin\Debug\net9.0\Basic_Info.runtimeconfig.json
@@ -77,11 +83,6 @@ C:\Users\Lenovo\source\c#\Kylie\Test\Test\bin\Debug\net9.0\Microsoft.VisualStudi
 C:\Users\Lenovo\source\c#\Kylie\Test\Test\bin\Debug\net9.0\ConsoleMenu.pdb
 C:\Users\Lenovo\source\c#\Kylie\Test\Test\bin\Debug\net9.0\Library_BasicInfo.pdb
 C:\Users\Lenovo\source\c#\Kylie\Test\Test\bin\Debug\net9.0\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
-C:\Users\Lenovo\source\c#\Kylie\Test\Test\obj\Debug\net9.0\Basic_Info.csproj.AssemblyReference.cache
-C:\Users\Lenovo\source\c#\Kylie\Test\Test\obj\Debug\net9.0\Basic_Info.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Lenovo\source\c#\Kylie\Test\Test\obj\Debug\net9.0\Basic_Info.AssemblyInfoInputs.cache
-C:\Users\Lenovo\source\c#\Kylie\Test\Test\obj\Debug\net9.0\Basic_Info.AssemblyInfo.cs
-C:\Users\Lenovo\source\c#\Kylie\Test\Test\obj\Debug\net9.0\Basic_Info.csproj.CoreCompileInputs.cache
 C:\Users\Lenovo\source\c#\Kylie\Test\Test\obj\Debug\net9.0\Basic_Info.csproj.Up2Date
 C:\Users\Lenovo\source\c#\Kylie\Test\Test\obj\Debug\net9.0\Basic_Info.dll
 C:\Users\Lenovo\source\c#\Kylie\Test\Test\obj\Debug\net9.0\refint\Basic_Info.dll
