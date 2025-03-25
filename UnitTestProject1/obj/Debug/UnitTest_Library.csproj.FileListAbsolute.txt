@@ -1,2 +1,0 @@
-C:\Users\Lenovo\source\c#\Kylie\Test\UnitTestProject1\obj\Debug\UnitTest_Library.csproj.AssemblyReference.cache
-C:\Users\Lenovo\source\c#\Kylie\Test\UnitTestProject1\obj\Debug\UnitTest_Library.csproj.CoreCompileInputs.cache
