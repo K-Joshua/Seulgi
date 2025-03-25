@@ -2,6 +2,7 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
+	  <StartupObject>Program</StartupObject>
     <TargetFramework>net9.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
@@ -9,7 +10,10 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.Data.SqlClient" Version="6.0.1" />
-    <PackageReference Include="MSTest.Analyzers" Version="3.8.2">
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="9.0.3" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.13.0" />
+    <PackageReference Include="MSTest.Analyzers" Version="3.8.3">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
@@ -20,6 +24,7 @@
   <ItemGroup>
     <ProjectReference Include="..\ConsoleMenu\ConsoleMenu.csproj" />
     <ProjectReference Include="..\Library_BasicInfo\Library_BasicInfo.csproj" />
+    <ProjectReference Include="..\LinqUsingDbContext\LinqUsingDbContext.csproj" />
   </ItemGroup>
 
 </Project>

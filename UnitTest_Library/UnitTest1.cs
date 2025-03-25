@@ -36,9 +36,9 @@ namespace LibraryBasicInfo.Tests
         [TestMethod]
         public void AgeCalculation_KanadeYoisaki()
         {
-            int age = BasicInfo.AgeCalculation(17, 3, 2025, 0, 2, 2004, 10);
+            int age = BasicInfo.AgeCalculation(17, 3, 2025, 0, 2, 2005, 10);
 
-            Assert.AreEqual(21, age); 
+            Assert.AreEqual(20, age); 
         }
     }
 }
