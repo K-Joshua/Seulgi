@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LinqUsingDbContext")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4fbd38fe853c8799533c319b93599a8c1c30c3db")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bfbccb8ef24d311a67a36ce7e9bdca8fff39a3e3")]
 [assembly: System.Reflection.AssemblyProductAttribute("LinqUsingDbContext")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LinqUsingDbContext")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

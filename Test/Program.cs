@@ -111,13 +111,29 @@ class Program
                     Save = Console.ReadKey();
                     if (Save.KeyChar == 'y' || Save.Key == ConsoleKey.Y)
                     {
-                        using (var context = new AppDbContext())
+                    using (var context = new AppDbContext())
+                    {
+                        context.Info.Add(new BasicInfo
                         {
-                            context.Info.Add(info);
-                            context.SaveChanges();
-                        }
+                            FirstName = info.FirstName,
+                            LastName = info.LastName,
+                            MiddleName = info.MiddleName,
+                            MiddleInitial = info.MiddleInitial,
+                            Country = info.Country,
+                            City = info.City,
+                            Barangay = info.Barangay,
+                            Street = info.Street,
+                            HouseNumber = info.HouseNumber,
+                            Birthday = info.Birthday,
+                            Registration_Date = info.Registration_Date,
+                            age = info.age
+                        });
 
-                        Console.WriteLine("\nData saved successfully!");
+                        context.Info.Add(info);         // Stage the data for saving
+                        context.SaveChanges();          // Commit the changes to the database
+                    }
+
+                    Console.WriteLine("\nData saved successfully!");
                     }
 
                 Console.WriteLine("\nSee all data? (Y/N): ");
