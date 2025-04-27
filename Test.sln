@@ -17,6 +17,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsumingLnqToSql", "Consum
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinqUsingDbContext", "LinqUsingDbContext\LinqUsingDbContext.csproj", "{21DFDB88-7883-400D-9208-E2FB46560210}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LINQPrac", "LINQPrac\LINQPrac.csproj", "{9D93BE69-C335-4624-92B4-FBAC07E9FFCC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterfaePrac", "InterfaePrac\InterfaePrac.csproj", "{FFA1802F-AE3C-473E-8453-FE886BC2C101}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +55,14 @@ Global
 		{21DFDB88-7883-400D-9208-E2FB46560210}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{21DFDB88-7883-400D-9208-E2FB46560210}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{21DFDB88-7883-400D-9208-E2FB46560210}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D93BE69-C335-4624-92B4-FBAC07E9FFCC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D93BE69-C335-4624-92B4-FBAC07E9FFCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D93BE69-C335-4624-92B4-FBAC07E9FFCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D93BE69-C335-4624-92B4-FBAC07E9FFCC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FFA1802F-AE3C-473E-8453-FE886BC2C101}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFA1802F-AE3C-473E-8453-FE886BC2C101}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFA1802F-AE3C-473E-8453-FE886BC2C101}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFA1802F-AE3C-473E-8453-FE886BC2C101}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

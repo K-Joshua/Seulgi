@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ConsumingLnqToSql")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dfc5bc06f965159ef551cb96a4a75546b5e5a559")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0187038bd888531219115fe1ee48fff3c14e4d90")]
 [assembly: System.Reflection.AssemblyProductAttribute("ConsumingLnqToSql")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ConsumingLnqToSql")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

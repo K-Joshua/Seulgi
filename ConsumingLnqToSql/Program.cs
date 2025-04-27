@@ -40,7 +40,7 @@ class Program
                 Console.WriteLine($"Subject   : {result.SubjectCode} - {result.SubjectName}");
                 Console.WriteLine($"Teacher   : {result.Teacher}");
                 Console.WriteLine($"Enrolled  : {result.DateEnrolled.ToShortDateString()}");
-                Console.WriteLine("-------------------------------------------");
+                Console.WriteLine("-------------------------------------------------------------------------------");
             }
         }
 
