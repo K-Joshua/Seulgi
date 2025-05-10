@@ -1,0 +1,7 @@
+C:\Users\Lenovo\source\c#\Kylie\Test\ConsumingLnqToSql\obj\Debug\net4.8\ConsumingLnqToSql.csproj.AssemblyReference.cache
+C:\Users\Lenovo\source\c#\Kylie\Test\ConsumingLnqToSql\obj\Debug\net4.8\ConsumingLnqToSql.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Lenovo\source\c#\Kylie\Test\ConsumingLnqToSql\obj\Debug\net4.8\ConsumingLnqToSql.AssemblyInfoInputs.cache
+C:\Users\Lenovo\source\c#\Kylie\Test\ConsumingLnqToSql\obj\Debug\net4.8\ConsumingLnqToSql.AssemblyInfo.cs
+C:\Users\Lenovo\source\c#\Kylie\Test\ConsumingLnqToSql\obj\Debug\net4.8\ConsumingLnqToSql.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\source\c#\Kylie\Test\ConsumingLnqToSql\obj\Debug\net4.8\ConsumingLnqToSql.sourcelink.json
+C:\Users\Lenovo\source\c#\Kylie\Test\ConsumingLnqToSql\bin\Debug\net4.8\.msCoverageSourceRootsMapping_ConsumingLnqToSql

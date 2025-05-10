@@ -2,6 +2,7 @@
 using Microsoft.Data.SqlClient;
 using ConsoleMenu_;
 using LibraryBasicInfo;
+using LinqUsingDbContext;
 
 class Program
 {   
@@ -13,7 +14,6 @@ class Program
         {
             try
             {
-                int CurrentDay = 0, CurrentMonth = 0, CurrentYear = 0;
                 int Day = 0, Month = 0, Year = 0;
                 int Age = 0;
                 Console.Clear();
@@ -32,20 +32,38 @@ class Program
                 info.LastName = Console.ReadLine();
                 Console.Clear();
                 //--------------------------------------------------------------------------------------------------------------------
-                Console_Design.Birthday();
-                Year = int.Parse(Console.ReadLine() ?? "0");
-                do
-                {
-                    Console.Write("Day: ");
-                    Day = int.Parse(Console.ReadLine() ?? "0");
-                } while (Day < 1 || Day > 31);
-                Console.Clear();
-                do
+                while (!TryAgain)
                 {
                     Console.Clear();
-                    Console_Design.Month();
-                    Month = int.Parse(Console.ReadLine() ?? "0");
-                } while (Month < 1 || Month > 12);
+                    do
+                    {
+                        Console_Design.Birthday();
+                        Year = int.Parse(Console.ReadLine() ?? "0");
+                    } while (Year < 1850 || Year > 2025);
+                    do
+                    {
+                        Console.Write("Day: ");
+                        Day = int.Parse(Console.ReadLine() ?? "0");
+                    } while (Day < 1 || Day > 31);
+                    Console.Clear();
+                    do
+                    {
+                        Console.Clear();
+                        Console_Design.Month();
+                        Month = int.Parse(Console.ReadLine() ?? "0");
+                    } while (Month < 1 || Month > 12);
+                    if (Month == 2 && BasicInfo.IsLeapYear(Year) && Day > 29)
+                    {
+                        Console.WriteLine("\n\nYour February is A Leap Year, Limit 29, Try Again");
+                        Console.ReadKey();
+                    }
+                    else if (Month == 2 && !BasicInfo.IsLeapYear(Year) && Day >28)
+                    {
+                        Console.WriteLine("\n\nError, February Only Has 28 days 'IF NOT LEAP YEAR' Try Again ");
+                        Console.ReadKey();
+                    }
+                    else { break; }
+                }
                 //--------------------------------------------------------------------------------------------------------------------
                 Console.Clear();
                 Console_Design.Adress();
@@ -60,19 +78,12 @@ class Program
                 info.HouseNumber = int.Parse(Console.ReadLine() ?? "0");
                 Console.Clear();
                 //--------------------------------------------------------------------------------------------------------------------
-                Console_Design.date();
-                CurrentYear = int.Parse(Console.ReadLine() ?? "0");
-                do
-                {
-                    Console.Write("Day: ");
-                    CurrentDay = int.Parse(Console.ReadLine() ?? "0");
-                } while (Day < 1 || Day > 31);
-                do
-                {
-                    Console.Clear();
-                    Console_Design.Month();
-                    CurrentMonth = int.Parse(Console.ReadLine() ?? "0");
-                } while (Month < 1 || Month > 12);
+                DateTime _cdate = DateTime.Now;
+
+                int CurrentYear = _cdate.Year;
+                int CurrentMonth = _cdate.Month; // Adds leading zero if needed
+                int CurrentDay = _cdate.Day;
+
                 //--------------------------------------------------------------------------------------------------------------------
                 Console.Clear();
                 Console.WriteLine("+----------------------------------------------------+");
@@ -82,15 +93,7 @@ class Program
                 Console.WriteLine("|                                                    |");
                 Console.WriteLine("+----------------------------------------------------+\n");
                 Console.WriteLine($"   Name: {info.LastName}, {info.FirstName} {info.MiddleInitial}.   ");
-
-                if (Month >= 10 && Month <= 12)
-                {
-                    Console.WriteLine($"   Birthday: {Month}/{Day}/{Year}   Age: {BasicInfo.AgeCalculation(CurrentDay, CurrentMonth, CurrentYear, Age, Month, Year, Day)}         ");
-                }
-                else
-                {
-                    Console.WriteLine($"   Birthday: 0{Month}/{Day}/{Year}   Age: {BasicInfo.AgeCalculation(CurrentDay, CurrentMonth, CurrentYear, Age, Month, Year, Day)}         ");
-                }
+                info.age = BasicInfo.AgeCalculation(CurrentDay, CurrentMonth, CurrentYear, Month, Year, Day);
                 Console.WriteLine("                                                    ");
                 Console.WriteLine($"   Adress: {info.HouseNumber}, {info.Street}, {info.Barangay}, {info.City}, {info.Country}                      \n\n");
                 Console.WriteLine($"                  Surname Signature: {info.LastName} \n");
@@ -98,96 +101,92 @@ class Program
                 // --------------------------------------------------------------------------------------------------------------------
                 DateTime _bday = new DateTime(Year, Month, Day);
                 DateTime _rdate = new DateTime(CurrentYear, CurrentMonth, CurrentDay);
-                DateTime _cdate = DateTime.Now;
+                info.Birthday = _bday;
+                info.Registration_Date = _rdate;
+                // --------------------------------------------------------------------------------------------------------------------
                 Console.WriteLine("Do you want to save this data? (Y)");
                 ConsoleKeyInfo Save = new ConsoleKeyInfo();
                 ConsoleKeyInfo See = new ConsoleKeyInfo();
                 ConsoleKeyInfo Delete = new ConsoleKeyInfo();
-                ConsoleKeyInfo _tryagain = new ConsoleKeyInfo();
-                Save = Console.ReadKey();
-                if (Save.KeyChar == 'y' || Save.Key == ConsoleKey.Y)
-                {
-                string connectionString = "Server=localhost\\sqlexpress;Database=seulgi;Integrated Security=True;TrustServerCertificate=True;";
-
-
-                using (SqlConnection connection = new SqlConnection(connectionString))
+                    Save = Console.ReadKey();
+                    if (Save.KeyChar == 'y' || Save.Key == ConsoleKey.Y)
                     {
-                        connection.Open();
-                        string insert = "INSERT INTO info (FirstName, LastName, MiddleName, Registration_Date, Birthday, Age, Country, City, Barangay, Street, HouseNumber ) VALUES (@FirstName, @LastName, @MiddleName, @Registration_Date, @Birthday, @Age, @Country, @City, @Barangay, @Street, @HouseNumber)";
-
-                        using (SqlCommand command = new SqlCommand(insert, connection))
+                    using (var context = new AppDbContext())
+                    {
+                        context.Info.Add(new BasicInfo
                         {
-                            command.Parameters.AddWithValue("@FirstName", info.FirstName);
-                            command.Parameters.AddWithValue("@MiddleName", info.MiddleName);
-                            command.Parameters.AddWithValue("@LastName", info.LastName);
-                            command.Parameters.AddWithValue("@Registration_Date", _cdate);
-                            command.Parameters.AddWithValue("@Birthday", _bday);
-                            command.Parameters.AddWithValue("@Age", BasicInfo.AgeCalculation(CurrentDay, CurrentMonth, CurrentYear, Age, Month, Year, Day));
-                            command.Parameters.AddWithValue("@Country", info.Country);
-                            command.Parameters.AddWithValue("@City", info.City);
-                            command.Parameters.AddWithValue("@Barangay", info.Barangay);
-                            command.Parameters.AddWithValue("@Street", info.Street);
-                            command.Parameters.AddWithValue("@HouseNumber", info.HouseNumber);
+                            FirstName = info.FirstName,
+                            LastName = info.LastName,
+                            MiddleName = info.MiddleName,
+                            MiddleInitial = info.MiddleInitial,
+                            Country = info.Country,
+                            City = info.City,
+                            Barangay = info.Barangay,
+                            Street = info.Street,
+                            HouseNumber = info.HouseNumber,
+                            Birthday = info.Birthday,
+                            Registration_Date = info.Registration_Date,
+                            age = info.age
+                        });
 
-                            command.ExecuteNonQuery();
-                        }
+                        context.Info.Add(info);         // Stage the data for saving
+                        context.SaveChanges();          // Commit the changes to the database
                     }
-                    Console.Clear();
-                    Console.WriteLine("Data saved successfully\n\n");
-                    Console.WriteLine("Do you want to see the data? (Y)");
-                    See = Console.ReadKey();
-                if (See.Key == ConsoleKey.Y || See.KeyChar == 'y')
+
+                    Console.WriteLine("\nData saved successfully!");
+                    }
+
+                Console.WriteLine("\nSee all data? (Y/N): ");
+                var seeKey = Console.ReadKey();
+                Console.WriteLine();
+
+                if (seeKey.Key == ConsoleKey.Y || seeKey.KeyChar == 'y')
                 {
                     Console.Clear();
-                    string select = "SELECT * FROM info";
-
-                    using (SqlConnection connection = new SqlConnection(connectionString))
+                    using (var context = new AppDbContext())
                     {
-                        connection.Open();
+                        var allData = context.Info.ToList();
 
-                        using (SqlCommand command = new SqlCommand(select, connection))
-                        using (SqlDataReader reader = command.ExecuteReader())
+                        Console.WriteLine("ID\tFirst\tLast\tMiddle\tRegDate\t\tBirthday\tAge\tCountry\tCity\tBarangay\tStreet\tHouse#");
+                        Console.WriteLine("------------------------------------------------------------------------------------------------------------");
+
+                        foreach (var item in allData)
                         {
-                            Console.WriteLine("ID\tFirstName\tLastName\tMiddleName\tRegDate\t\tBirthday\tAge\tCountry\tCity\tBarangay\tStreet\tHouseNumber");
-                            Console.WriteLine("---------------------------------------------------------------------------------------------------------------------");
-
-                            //read row data~
-                            while (reader.Read())
-                            {
-                                Console.WriteLine($"{reader["ID"]}\t{reader["FirstName"]}\t{reader["LastName"]}\t{reader["MiddleName"]}\t{reader["Registration_Date"]}\t{reader["Birthday"]}\t{reader["Age"]}\t{reader["Country"]}\t{reader["City"]}\t{reader["Barangay"]}\t{reader["Street"]}\t{reader["HouseNumber"],-5}");
-                            }
+                            Console.WriteLine($"{item.ID}\t{item.FirstName}\t{item.LastName}\t{item.MiddleName}\t{item.Registration_Date:yyyy-MM-dd}\t{item.Birthday:yyyy-MM-dd}\t{item.age}\t{item.Country}\t{item.City}\t{item.Barangay}\t{item.Street}\t{item.HouseNumber}");
                         }
                     }
                 }
-                        Console.WriteLine("\n\nDo you want to delete the data? (Y)");
-                        Delete = Console.ReadKey();
-                        if (Delete.Key == ConsoleKey.Y || Delete.KeyChar == 'y')
+
+                Console.WriteLine("\nDelete a record? (Y/N): ");
+                var deleteKey = Console.ReadKey();
+                Console.WriteLine();
+
+                if (deleteKey.Key == ConsoleKey.Y || deleteKey.KeyChar == 'y')
+                {
+                    Console.Write("Enter ID to delete: ");
+                    int id = int.Parse(Console.ReadLine());
+
+                    using (var context = new AppDbContext())
+                    {
+                        var record = context.Info.FirstOrDefault(x => x.ID == id);
+                        if (record != null)
                         {
-                            Console.Clear();
-                            Console.WriteLine("Enter the ID of the data you want to delete: ");
-                            int ID = int.Parse(Console.ReadLine() ?? "0");
-                            string delete = "DELETE FROM info WHERE ID = @ID";
-                            using (SqlConnection connection = new SqlConnection(connectionString))
-                            {
-                                connection.Open();
-                                using (SqlCommand command = new SqlCommand(delete, connection))
-                                {
-                                    command.Parameters.AddWithValue("@ID", ID);
-                                    command.ExecuteNonQuery();
-                                }
-                            }
-                            Console.Clear();
-                            Console.WriteLine("Data deleted successfully\n\n");
-                        Console.WriteLine("~~           Press Anything To Proceed              ~~");
-                        Console.ReadKey();
+                            context.Info.Remove(record);
+                            context.SaveChanges();
+                            Console.WriteLine("Data deleted successfully.");
+                        }
+                        else
+                        {
+                            Console.WriteLine("Record not found.");
+                        }
                     }
                 }
-                else
-                {
-                    Console.WriteLine("Data not saved\n\n");
-                Console.WriteLine("~~           Press Anything To Proceed              ~~");
+
+                Console.WriteLine("\n~~ Press any key to continue ~~");
                 Console.ReadKey();
-            }
+
+                ConsoleKeyInfo _tryagain = new ConsoleKeyInfo();
+
                 Console.Clear();
                 Console.WriteLine("Do you want to try again? (N)");
                 _tryagain = Console.ReadKey();
@@ -196,7 +195,7 @@ class Program
                     TryAgain = true;
                 }
                 Console.Clear();
-            Console.WriteLine("~~           Thank You Come Again              ~~");
+                Console.WriteLine("~~           Thank You Come Again              ~~");
             }
             catch (Exception)
             {
